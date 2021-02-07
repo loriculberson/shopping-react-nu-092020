@@ -1,6 +1,6 @@
 import Product from './Product'
 
-function ShoppingList({ products, addToFavorites, favorites }){
+function ShoppingList({ products, toggleFavorites, favorites }){
 
   function isFavorite(id){
     if (favorites.includes(id)) {
@@ -18,7 +18,7 @@ function ShoppingList({ products, addToFavorites, favorites }){
     return (
       <Product 
         item={product} 
-        addToFavorites={addToFavorites} 
+        toggleFavorites={toggleFavorites} 
         isFavorite={isFavorite(product.id)}
       /> 
     )

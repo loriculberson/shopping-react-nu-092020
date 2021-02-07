@@ -6,9 +6,12 @@ import React, { useState, useEffect } from 'react'
 function App() {
   const [favorites, setFavorites] = useState([])
 
-  function addToFavorites(id) {
+  function toggleFavorites(id) {
    if (!favorites.includes(id)) {
      setFavorites([...favorites, id])
+   } else {
+     const updatedFaves = favorites.filter(fav => fav !== id)
+     setFavorites(updatedFaves)
    }
   }
 
@@ -17,7 +20,7 @@ function App() {
     <div className="container">
       <ShoppingList 
         products={productData} 
-        addToFavorites={addToFavorites} 
+        toggleFavorites={toggleFavorites} 
         favorites={favorites}
       />
     </div>
