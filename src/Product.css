@@ -2,9 +2,14 @@
   border: 1px solid black;
   padding: 20px;
   max-width: 300px;
+  text-align: center;
 }
 
 .favorite {
   color: red;
   font-weight: bold;
+}
+
+.product-img {
+  max-width: 100px;
 }
